@@ -40,9 +40,11 @@ no_ebin_commit:
 	rm -rf *_a;
 	#INFO: Compile application
 	rebar3 compile;	
-	rm -r _build;
+	rm -rf _build;
 	rm -rf ebin;
 	rebar3 edoc;
+	rm -rf _build;
+	rm -rf rebar.lock
 #	git add *;
 #	git add -f *;
 #	git commit -m $(m);
